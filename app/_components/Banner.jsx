@@ -6,7 +6,7 @@ import shapeDark from "../../public/assets/shape-bg000.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import styles from "./styles.module.css";
-import Typical from "react-typical";
+import { TypeAnimation } from 'react-type-animation';
 
 const Banner = () => {
   const router = useRouter();
@@ -24,12 +24,10 @@ const Banner = () => {
               </span>
             </h1>
 
-            <h2 className="text-xl sm:text-2xl lg:text-3xl text-white font-salsa">
-              <Typical
-                loop={Infinity}
-                wrapper="span"
-                steps={[
-                  "Software Engineer",
+            <h2 className="text-xl sm:text-md lg:text-xl text-white font-salsa">
+            <TypeAnimation
+            sequence={[
+             "Software Engineer",
                   1000,
                   "Full Stack Developer",
                   1000,
@@ -41,8 +39,13 @@ const Banner = () => {
                   1000,
                   "Back End Developer",
                   1000,
-                ]}
-              />
+    ]}
+    wrapper="span"
+    speed={50}
+    repeat={Infinity}
+    style={{ fontSize: '2em', display: 'inline-block' }}
+  />
+             
             </h2>
 
             <p className="text-md text-justify sm:text-lg lg:text-xl text-gray-200 max-w-xl mx-auto lg:mx-0 font-mulish leading-relaxed">
