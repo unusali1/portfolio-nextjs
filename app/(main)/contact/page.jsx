@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import "react-toastify/dist/ReactToastify.css";
 import ContactMe from "@/app/_components/ContactMe";
 
 const Contact = () => {

@@ -11,13 +11,13 @@ import dayfuna2 from "../../public/assets/project/dayfuna/dayfuna2.webp"
 import dayfuna3 from "../../public/assets/project/dayfuna/dayfuna3.webp"
 import dayfuna4 from "../../public/assets/project/dayfuna/dayfuna4.webp"
 
-import repair1 from "../../public/assets/project/repair/repair1.png";
-import repair2 from "../../public/assets/project/repair/repair2.png";
-import repair3 from "../../public/assets/project/repair/repair3.png";
+import repair1 from "../../public/assets/project/repair/repair1.webp";
+import repair2 from "../../public/assets/project/repair/repair2.webp";
+import repair3 from "../../public/assets/project/repair/repair3.webp";
 
 import onlineShop1 from "../../public/assets/project/onlineShop/online1.webp";
-import onlineShop2 from "../../public/assets/project/onlineShop/online2.png";
-import onlineShop3 from "../../public/assets/project/onlineShop/online3.png";
+import onlineShop2 from "../../public/assets/project/onlineShop/online2.webp";
+import onlineShop3 from "../../public/assets/project/onlineShop/online3.webp";
 
 import vetSheba1 from "../../public/assets/project/vetSheba/vet1.webp";
 import vetSheba2 from "../../public/assets/project/vetSheba/vet2.webp";
@@ -33,12 +33,6 @@ import coffee1 from "../../public/assets/project/coffe/cof1.webp";
 import coffee2 from "../../public/assets/project/coffe/cof2.webp";
 import coffee3 from "../../public/assets/project/coffe/cof3.webp";
 
-import restaurant1 from "../../public/assets/project/returent/rest1.png";
-import restaurant2 from "../../public/assets/project/returent/rest2.png";
-import restaurant3 from "../../public/assets/project/returent/rest3.png";
-
-import blog1 from "../../public/assets/project/blog/blog1.png";
-import blog2 from "../../public/assets/project/blog/blog2.png";
 
 import aiApp1 from "../../public/assets/mobileApp/abroadInquiry/aiApp1.png";
 import aiApp2 from "../../public/assets/mobileApp/abroadInquiry/aiApp2.png";
@@ -419,70 +413,6 @@ export const allProjectData = [
         images: [coffee1, coffee2, coffee3]
     },
 
-
-    {
-        id: 9,
-        name: "Restaurant",
-        description: `A Food ordering react application where users can order food from the Food Shop menu, can add their desired food to cart, can see total number of food & price in checkout.`,
-        liveLink: "https://unusali1.github.io/Resturent-Project/",
-        githubLink: "https://github.com/unusali1/Resturent-Project",
-        languages: [
-            {
-                id: 1,
-                name: "HTML",
-                icon: "logos:html-5"
-            },
-            {
-                id: 2,
-                name: "CSS",
-                icon: "flowbite:css-solid"
-            },
-            {
-                id: 3,
-                name: "BootStrap",
-                icon: "skill-icons:bootstrap"
-            },
-            {
-                id: 4,
-                name: "JavaScript",
-                icon: "tabler:brand-javascript"
-            },
-
-        ],
-        images: [restaurant1, restaurant2, restaurant3]
-    },
-
-    {
-        id: 10,
-        name: "Blog Site",
-        description: `This is blog site. User can read post and admin update her/his blog post and can create new blog post.`,
-        liveLink: "https://unusali1.github.io/Blog-Site-Project/",
-        githubLink: "https://github.com/unusali1/Blog-Site-Project",
-        languages: [
-            {
-                id: 1,
-                name: "HTML",
-                icon: "logos:html-5"
-            },
-            {
-                id: 2,
-                name: "CSS",
-                icon: "flowbite:css-solid"
-            },
-            {
-                id: 3,
-                name: "BootStrap",
-                icon: "skill-icons:bootstrap"
-            },
-            {
-                id: 4,
-                name: "JavaScript",
-                icon: "tabler:brand-javascript"
-            },
-
-        ],
-        images: [blog1, blog2]
-    },
 ] 
 
 export const homeProjectData = [
