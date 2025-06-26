@@ -1,0 +1,52 @@
+/* .mainSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 220px;
+  padding-bottom: 120px;
+  background-image: url('/assets/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+.profile_picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 0px 0px white;
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+  }
+  
+  .profile_picture:hover {
+    transform: scale(1.07);
+    transition: 1s ease-out;
+  }
+  
+  .profile_picture_background {
+    height: 92%;
+    width: 92%;
+    background-image: url('/assets/unusD.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .profile_picture_background:hover {
+    transform: scale(1.07);
+    transition: 1s ease-out;
+  }
+  
+
+
+
+  
+  
