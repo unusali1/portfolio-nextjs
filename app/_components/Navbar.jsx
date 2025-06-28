@@ -59,7 +59,7 @@ export default function Navbar() {
   const [navActive, setNavActive] = useState(false);
   const [headerActive, setHeaderActive] = useState(false);
   const pathname = usePathname(); 
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleNavbar = () => setNavActive((prev) => !prev);
 
