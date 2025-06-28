@@ -59,7 +59,7 @@ export default function Navbar() {
   const [navActive, setNavActive] = useState(false);
   const [headerActive, setHeaderActive] = useState(false);
   const pathname = usePathname(); 
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const toggleNavbar = () => setNavActive((prev) => !prev);
 
@@ -104,7 +104,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 h-full flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex-shrink-0">
-           <Image src={ isDarkMode ? logoUnus : headerActive ? logoUnusBlack : logoUnus} width={220} height={160} alt="Logo" className="mt-2" />
+           <Image src={ isDarkMode ? logoUnus : headerActive ? logoUnusBlack : logoUnus} width={220} height={160} alt="Logo" className="mt-2 w-48 h-14 sm:w-48 sm:h-16" />
         </a>
 
         {/* Desktop Navigation */}
@@ -169,11 +169,13 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-3xl text-white"
+          className={`md:hidden text-3xl ${
+            isDarkMode ? "text-white" : headerActive ? "text-black" : "text-white"
+          }`}
           onClick={toggleNavbar}
           aria-label="Toggle menu"
         >
-          <Icon icon="ic:round-menu" />
+          <Icon icon="ic:round-menu"  />
         </button>
       </div>
 
@@ -192,11 +194,11 @@ export default function Navbar() {
         } md:hidden`}
       >
         {/* Top Bar in Mobile Menu */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex  justify-between mb-8">
           <Image
-            src="/assets/images/logo-light.svg"
-            width={64}
-            height={24}
+            src={logoUnus}
+            width={120}
+            height={80}
             alt="Logo"
           />
           <button

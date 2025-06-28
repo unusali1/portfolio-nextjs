@@ -10,7 +10,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import aiBg from "../../public/assets/ai.jpg";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
@@ -64,8 +63,6 @@ const ProjectsCard = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
-          {/* Project 1: Abroad Inquiry */}
-
           {homeProjectData?.map((project) => (
             <Card
               className="group overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700"
@@ -172,34 +169,35 @@ const ProjectsCard = () => {
           ))}
         </div>
 
+
         {/* Mobile App section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-          {mobileAppData.map((mobile) => (
+          {mobileAppData?.map((mobile) => (
             <Card
-              className="group overflow-hidden  hover:shadow-2xl transition-all duration-300 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700"
+              className="group overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700"
               role="article"
-              aria-labelledby="dayfuna-heading"
-              aria-describedby="dayfuna-description"
+              aria-labelledby="a-to-z-heading"
+              aria-describedby="a-to-z-description"
               key={mobile.id}
             >
-              <CardContent className="p-6 md:p-8 flex flex-col md:flex-col gap-6 justify-center items-center">
-                {/* Text Section */}
-                <div className="flex-1 flex flex-col justify-center space-y-4 max-w-md text-center md:text-left">
+              <CardContent className="p-6 md:p-10 flex flex-col md:flex-col gap-10 ">
+                {/* Text content */}
+                <div className="flex-1 flex flex-col justify-center space-y-6">
                   <h3
-                    id="dayfuna-heading"
-                    className="text-center text-2xl font-semibold text-gray-900 dark:text-white font-salsa"
+                    id="a-to-z-heading"
+                    className=" text-center text-3xl font-bold text-gray-900 dark:text-white tracking-tight font-salsa"
                   >
                     {mobile.name}
                   </h3>
                   <p
-                    id="dayfuna-description"
-                    className=" text-center text-gray-600 dark:text-gray-300 line-clamp-3 font-mulish"
+                    id="a-to-z-description"
+                    className=" text-center text-gray-700 dark:text-gray-300 leading-relaxed font-mulish"
                   >
-                    {mobile.description}
+                     {mobile.description}
                   </p>
 
                   {/* Tech badges */}
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 justify-center">
                     {mobile.languages.map((lan) => (
                       <Badge
                         variant="outline"
@@ -212,7 +210,8 @@ const ProjectsCard = () => {
                     ))}
                   </div>
 
-                  <div className="flex justify-center md:justify-center">
+                  {/* Action Buttons */}
+                  <div className="flex flex-wrap gap-4 pt-2">
                     <Button
                       variant="link"
                       className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors font-semibold font-salsa"
@@ -251,7 +250,7 @@ const ProjectsCard = () => {
                   </div>
                 </div>
 
-                {/* Carousel Section */}
+                {/* Image carousel */}
                 <div className="flex-1 flex justify-center items-center">
                   <div className="relative w-full max-w-md overflow-hidden rounded-2xl shadow-lg bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
                     <Carousel
@@ -275,7 +274,7 @@ const ProjectsCard = () => {
                                 height={500}
                                 sizes="(max-width: 768px) 100vw, 50vw"
                                 placeholder="blur"
-                                className="rounded-xl object-center w-full h-56 md:h-96 transition-transform duration-500 group-hover:scale-105"
+                                className="rounded-xl object-center w-full h-64 md:h-96 transition-transform duration-500 group-hover:scale-105"
                               />
                             </div>
                           </CarouselItem>

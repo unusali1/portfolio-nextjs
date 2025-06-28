@@ -1,7 +1,7 @@
 import React from "react";
 import icon1 from "../../public/assets/icon-1.svg";
 import icon2 from "../../public/assets/icon-2.svg";
-import icon4 from "../../public/assets/icon-4.svg";
+import icon4 from "../../public/assets/icon-4.png";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -49,7 +49,7 @@ const Services = () => {
         {serviceData.map((service) => (
           <Card
             key={service.id}
-            className="group flex flex-col items-center p-8 bg-white/90 dark:bg-gray-900 backdrop-blur-xl hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200/50 dark:border-gray-700/50 rounded-2xl"
+            className="group flex flex-col items-center p-8 bg-white/90 dark:bg-gray-900 backdrop-blur-xl hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200/50 dark:border-gray-700 rounded-2xl"
             role="article"
             aria-labelledby={`service-title-${service.id}`}
           >

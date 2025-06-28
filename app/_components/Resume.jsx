@@ -286,26 +286,26 @@ export default function Resume() {
 
       <Tabs
         defaultValue="education"
-        className="w-full max-w-[350px] mx-auto sm:hidden bg-none "
+        className="w-full max-w-[350px] mx-auto sm:hidden bg-none"
       >
         <TabsList className="grid grid-cols-4 gap-2 p-2 bg-gray-100 rounded-lg h-20">
           <TabsTrigger value="education" className="p-2 rounded-md ">
             <Icon
               icon="tdesign:education-filled"
-              className="w-8 h-8 text-gray-800"
+              className="w-8 h-8"
             />
           </TabsTrigger>
           <TabsTrigger value="work" className="p-2 rounded-md ">
-            <Icon icon="pajamas:work" className="w-8 h-8 text-gray-800" />
+            <Icon icon="pajamas:work" className="w-8 h-8" />
           </TabsTrigger>
           <TabsTrigger value="programming" className="p-2 rounded-md">
             <Icon
               icon="hugeicons:computer-programming-01"
-              className="w-8 h-8 text-gray-800"
+              className="w-8 h-8"
             />
           </TabsTrigger>
           <TabsTrigger value="project" className="p-2 rounded-md">
-            <Icon icon="mdi:web-box" className="w-8 h-8 text-gray-800" />
+            <Icon icon="mdi:web-box" className="w-8 h-8" />
           </TabsTrigger>
         </TabsList>
 
@@ -314,23 +314,23 @@ export default function Resume() {
             {educationData.map((edu, index) => (
               <div
                 key={index}
-                className="p-4  bg-white hover:-translate-y-1 hover:shadow-md"
+                className="mt-4 rounded-sm p-4 bg-white hover:-translate-y-1 hover:shadow-md  dark:bg-gray-900 border border-gray-200 dark:border-gray-700"
               >
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center">
                     <span className="w-3 h-3 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mr-3"></span>
-                    <h2 className="text-base font-bold text-gray-800 tracking-tight font-salsa">
+                    <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100 tracking-tight font-salsa">
                       {edu.institution}
                     </h2>
                   </div>
                 </div>
-                <p className="mt-2 ml-6 text-gray-600 text-sm font-mulish">{edu.degree}</p>
+                <p className="mt-2 ml-6 text-gray-600 dark:text-gray-200 text-sm font-mulish">{edu.degree}</p>
                 <span className="text-gray-600 px-5 mt-2 flex text-xs">
                   <Icon
                     icon="stash:data-date-duotone"
-                    className="w-6 h-6 text-gray-800"
+                    className="w-6 h-6 text-gray-800 dark:text-gray-200"
                   />
-                  <span className="text-gray-600 px-1 py-1 text-xs font-semibold font-mulish">
+                  <span className="text-gray-600 dark:text-gray-200 px-1 py-1 text-xs font-semibold font-mulish">
                     {edu.years}
                   </span>
                 </span>
@@ -350,26 +350,26 @@ export default function Resume() {
             {workingData.map((work, index) => (
               <div
                 key={index}
-                className="p-4 bg-white hover:-translate-y-1 hover:shadow-md"
+               className="mt-4 rounded-sm p-4 bg-white hover:-translate-y-1 hover:shadow-md  dark:bg-gray-900 border border-gray-200 dark:border-gray-700"
               >
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center">
                     <span className="w-3 h-3 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mr-3"></span>
-                    <h2 className="text-xl font-bold text-gray-800 tracking-tight font-salsa">
+                    <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100 tracking-tight font-salsa">
                       {work.institution}
                     </h2>
                   </div>
                   <span className="text-gray-600 px-6 flex text-xs">
                     <Icon
                       icon="stash:data-date-duotone"
-                      className="w-6 h-6 text-gray-800"
+                      className="w-6 h-6 text-gray-800 dark:text-gray-200"
                     />
-                    <span className="text-gray-600 px-1 py-1 text-xs font-semibold font-mulish">
+                    <span className="text-gray-600 dark:text-gray-200 px-1 py-1 text-xs font-semibold font-mulish">
                       {work.joining_Date} - {work.end_date}
                     </span>
                   </span>
                 </div>
-                <p className="mt-2 ml-6 text-gray-600 text-sm text-justify font-medium font-mulish">
+                <p className="mt-2 ml-6 text-gray-600 dark:text-gray-200 text-sm text-justify font-medium font-mulish">
                   {work.description}
                 </p>
               </div>
@@ -384,7 +384,7 @@ export default function Resume() {
                 <div key={index}>
                   <div className="flex">
                     <span className="w-3 h-3 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mr-2 mt-2"></span>
-                    <h3 className="text-base font-semibold text-gray-900 mb-3 font-salsa">
+                    <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100 mb-3 font-salsa">
                       {category.title}
                     </h3>
                   </div>
@@ -392,7 +392,7 @@ export default function Resume() {
                     {category.skill.map((skill, idx) => (
                       <span
                         key={idx}
-                        className="bg-orange-100 text-orange-700 px-2.5 py-1 rounded-full text-xs font-medium font-mulish"
+                        className="bg-orange-100 dark:bg-gray-700 text-orange-700 dark:text-gray-100 px-2.5 py-1 rounded-full text-xs font-medium font-mulish"
                       >
                         {skill}
                       </span>
@@ -409,12 +409,12 @@ export default function Resume() {
             {clientProjects.map((project, index) => (
               <div
                 key={index}
-                className="mb-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg px-6 rounded-lg bg-white mt-4"
+                className="mt-4 rounded-sm p-4 bg-white hover:-translate-y-1 hover:shadow-md  dark:bg-gray-900 border border-gray-200 dark:border-gray-700"
               >
                 <div className="flex flex-row sm:flex-row sm:items-center gap-4">
                   <div className="flex items-center">
                     <span className="w-4 h-4 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mr-4 shadow-md"></span>
-                    <h2 className="text-lg font-bold text-gray-800 tracking-tight font-salsa">
+                    <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100 tracking-tight font-salsa">
                       {project.institution}
                     </h2>
                   </div>
@@ -430,7 +430,7 @@ export default function Resume() {
                 </div>
 
                 {project.description && (
-                  <p className="ml-8 mt-2 text-gray-500 text-base leading-relaxed font-mulish">
+                  <p className="ml-8 mt-2 text-gray-500 dark:text-gray-200 text-base leading-relaxed font-mulish">
                     {project.description}
                   </p>
                 )}

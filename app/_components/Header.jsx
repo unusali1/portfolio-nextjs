@@ -6,9 +6,7 @@ import { Icon } from "@iconify/react";
 import logoUnus from "../../public/assets/logoBlack.png";
 import logoUnusWhite from "../../public/assets/logoWhite.png";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; 
-
-
+import { usePathname } from "next/navigation";
 
 const socialMediaLinks = [
   {
@@ -43,8 +41,8 @@ const navigationData = [
 export default function Header() {
   const [navActive, setNavActive] = useState(false);
   const [headerActive, setHeaderActive] = useState(false);
-  const pathname = usePathname(); 
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const pathname = usePathname();
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const toggleNavbar = () => setNavActive((prev) => !prev);
 
@@ -76,7 +74,6 @@ export default function Header() {
     }
   };
 
-
   return (
     <header
       className={`z-50 transition-all duration-300 py-3 sm:py-4 h-16 sm:h-20 fixed top-0 left-0 right-0 shadow-md bg-white dark:bg-[#212A4A] animate-slideIn`}
@@ -84,7 +81,13 @@ export default function Header() {
       <div className="container mx-auto px-4 h-full flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
-          <Image src={ isDarkMode ? logoUnusWhite : logoUnus} width={220} height={160} alt="Logo" className="mt-2" />
+          <Image
+            src={isDarkMode ? logoUnusWhite : logoUnus}
+            width={220}
+            height={160}
+            alt="Logo"
+            className="mt-2 w-48 h-14 sm:w-48 sm:h-16"
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -109,7 +112,7 @@ export default function Header() {
 
         {/* Social Icons */}
         <ul className="hidden md:flex gap-4 items-center">
-          {socialMediaLinks.map((item,index) => (
+          {socialMediaLinks.map((item, index) => (
             <li key={index}>
               <a
                 href={item.href}
@@ -123,27 +126,26 @@ export default function Header() {
         </ul>
 
         <div className="ml-3">
-              <button
-                onClick={toggleDarkMode}
-                className="p-2 bg-gray-200 dark:bg-gray-700 px-2 py-2 rounded-full mt-1"
-              >
-                {isDarkMode ? (
-                  <Icon
-                    icon="material-symbols-light:dark-mode-rounded"
-                    className="font-bold text-xl text-white"
-                  />
-                ) : (
-                  <Icon
-                    icon="uil:sun"
-                    className="font-bold text-xl text-black"
-                  />
-                )}
-              </button>
-            </div>
+          <button
+            onClick={toggleDarkMode}
+            className="p-2 bg-gray-200 dark:bg-gray-700 px-2 py-2 rounded-full mt-1"
+          >
+            {isDarkMode ? (
+              <Icon
+                icon="material-symbols-light:dark-mode-rounded"
+                className="font-bold text-xl text-white"
+              />
+            ) : (
+              <Icon icon="uil:sun" className="font-bold text-xl text-black" />
+            )}
+          </button>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-3xl text-black"
+          className={`md:hidden text-3xl ${
+            isDarkMode ? "text-white" : "text-black"
+          }`}
           onClick={toggleNavbar}
           aria-label="Toggle menu"
         >
@@ -154,7 +156,9 @@ export default function Header() {
       {/* Overlay Background */}
       <div
         className={`fixed inset-0 bg-black transition-opacity duration-300 z-40 ${
-          navActive ? "opacity-70 pointer-events-auto" : "opacity-0 pointer-events-none"
+          navActive
+            ? "opacity-70 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         onClick={toggleNavbar}
       ></div>
@@ -167,12 +171,7 @@ export default function Header() {
       >
         {/* Top Bar in Mobile Menu */}
         <div className="flex items-center justify-between mb-8">
-          <Image
-            src={logoUnusWhite}
-            width={120}
-            height={80}
-            alt="Logo"
-          />
+          <Image src={logoUnusWhite} width={120} height={80} alt="Logo" />
           <button
             onClick={toggleNavbar}
             className="text-white text-2xl p-2"
@@ -209,9 +208,13 @@ export default function Header() {
 
         {/* Social Icons Mobile */}
         <ul className="flex gap-4 mt-6">
-          {socialMediaLinks.map((item,index) => (
+          {socialMediaLinks.map((item, index) => (
             <li key={index}>
-              <a href={item.href} className="text-xl hover:text-pink-400" target="_blank">
+              <a
+                href={item.href}
+                className="text-xl hover:text-pink-400"
+                target="_blank"
+              >
                 <Icon icon={item.icon} />
               </a>
             </li>

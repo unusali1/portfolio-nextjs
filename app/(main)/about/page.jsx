@@ -1,15 +1,13 @@
+"use client"
 import React from "react";
-import aboutImg from "../../../public/assets/aboutBanner.webp";
-import profile from "../../../public/assets/unus.jpg";
+import profile from "../../../public/assets/unus.png";
 import Image from "next/image";
 import Resume from "@/app/_components/Resume";
-
+import { TypeAnimation } from 'react-type-animation';
 const Page = () => {
   return (
     <>
       <section>
-      
-
         <div className="w-full">
           <div className="flex items-center justify-center mt-40">
             <Image
@@ -22,12 +20,37 @@ const Page = () => {
 
         {/* About Section */}
         <div className="mt-8 px-4 md:px-16 max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl font-semibold mb-4 font-salsa">
-            Md. Unus Ali
-          </h1>
-          <h2 className="text-lg text-gray-500 mb-6">Web Developer</h2>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-extrabold leading-tight text-white tracking-tight font-salsa">
+              HELLO, I&apos;M{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-pink-400">
+                Md. UNUS ALI
+              </span>
+            </h1>
+          <h2 className="text-lg text-white font-salsa mt-6">
+              <TypeAnimation
+                sequence={[
+                  "Software Engineer",
+                  1000,
+                  "Full Stack Developer",
+                  1000,
+                  "Web Developer",
+                  1000,
+                  "MERN Stack Developer",
+                  1000,
+                  "Front End Developer",
+                  1000,
+                  "Back End Developer",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+                style={{ fontSize: '2em', display: 'inline-block' }}
+              />
 
-          <p className="text-base leading-relaxed mb-8 font-mulish">
+            </h2>
+
+          <p className="text-base mt-4 leading-relaxed mb-8 font-mulish">
            I am eager to establish my professional path by utilizing modern technology and applying my integrated knowledge. Currently working at 'Abroad Inquiry,' my goal is to continue growing professionally by staying updated with the latest technological advancements and applying them effectively in real-world projects. My dedication to learning and drive for excellence motivate me to play a significant role in the growth and success of a progressive organization.
           </p>
         </div>
@@ -50,13 +73,13 @@ const Page = () => {
               (By Birth)
             </p>
             <p className="font-mulish">
-              <strong className="font-mulish">Marital Status:</strong> Single
+              <strong className="font-mulish">Marital Status:</strong> Married
             </p>
             <p className="font-mulish">
               <strong className="font-mulish">Religion:</strong> Islam
             </p>
             <p className="font-mulish">
-              <strong className="font-mulish">Blood Group:</strong> B+ve
+              <strong className="font-mulish">Blood Group:</strong> B (+ve)
             </p>
             <p className="font-mulish">
               <strong className="font-mulish">Languages:</strong> Bangla

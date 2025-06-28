@@ -32,44 +32,13 @@ const Projects = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      {/* Banner Section */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="relative h-[60vh] bg-cover bg-center"
-        style={{ backgroundImage: `url(${projectBanner.src})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent flex items-center">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="max-w-2xl"
-            >
-              <h2 className="text-2xl sm:text-5xl lg:text-6xl font-bold text-white font-roboto">
-                Web & Mobile App Projects
-              </h2>
-              <p className="mt-4 text-lg sm:text-xl text-gray-200 font-mulish">
-                Dive into a curated collection of my recent web and mobile
-                applications, built with a focus on performance, design, and
-                user experience. Each project highlights my ability to solve
-                real-world problems using modern technologies and clean code
-                architecture.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </motion.div>
-
       {/* Projects Section */}
       <section
         className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24"
         aria-labelledby="projects-heading"
       >
         {/* Header and Tabs */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
+        <div className="mt-12 px-4 flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

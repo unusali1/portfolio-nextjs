@@ -12,7 +12,7 @@ const Banner = () => {
   const router = useRouter();
 
   return (
-    <section className="relative bg-gradient-to-br from-[#1A1D2F] to-[#2F334D] dark:from-[#0e0e15] dark:to-[#252843] min-h-screen flex items-center justify-center py-12 md:py-16 lg:py-20 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#1A1D2F] to-[#2F334D] dark:from-[#0e0e15] dark:to-[#252843] min-h-screen flex items-center justify-center py-24 md:py-16 lg:py-20 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Text Content */}
@@ -24,10 +24,10 @@ const Banner = () => {
               </span>
             </h1>
 
-            <h2 className="text-xl sm:text-md lg:text-xl text-white font-salsa">
-            <TypeAnimation
-            sequence={[
-             "Software Engineer",
+            <h2 className="text-sm sm:text-md lg:text-xl text-white font-salsa">
+              <TypeAnimation
+                sequence={[
+                  "Software Engineer",
                   1000,
                   "Full Stack Developer",
                   1000,
@@ -39,20 +39,20 @@ const Banner = () => {
                   1000,
                   "Back End Developer",
                   1000,
-    ]}
-    wrapper="span"
-    speed={50}
-    repeat={Infinity}
-    style={{ fontSize: '2em', display: 'inline-block' }}
-  />
-             
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+                style={{ fontSize: '2em', display: 'inline-block' }}
+              />
+
             </h2>
 
             <p className="text-md text-justify sm:text-lg lg:text-xl text-gray-200 max-w-xl mx-auto lg:mx-0 font-mulish leading-relaxed">
               Hi, I&apos;m Md Unus Ali, a passionate developer from Bangladesh. I specialize in crafting modern, scalable, and user-friendly digital solutions using the MERN stack and cutting-edge frontend technologies.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-row sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
                 className="px-6 py-5 bg-indigo-600 text-white rounded-full shadow-lg hover:bg-indigo-700 hover:scale-105 transition-all duration-300 text-base font-semibold"
                 onClick={() => router.push("/works")}
@@ -74,16 +74,6 @@ const Banner = () => {
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
               <div className={styles.profile_picture}>
                 <div className={`${styles.profile_picture_background} bg-gradient-to-br from-indigo-500/50 to-pink-500/50`}></div>
-                {/* Uncomment and adjust when profile image is available */}
-                {/* <Image
-                  src={profile}
-                  alt="Md Unus Ali - Profile Picture"
-                  fill
-                  priority
-                  className="rounded-full object-cover p-4"
-                  sizes="(max-width: 640px) 80vw, (max-width: 1024px) 50vw, 384px"
-                  placeholder="blur"
-                /> */}
                 <div className={`${styles.profile_picture_border} border-indigo-400/30`}></div>
               </div>
             </div>

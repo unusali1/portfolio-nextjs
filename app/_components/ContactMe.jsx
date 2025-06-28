@@ -1,8 +1,11 @@
+"use client"
 import Image from 'next/image';
 import React from 'react';
 import iconMail from "../../public/assets/icon-5.svg";
+import { motion } from "framer-motion";
 
 const ContactMe = () => {
+
   return (
     <section className="py-16" aria-label="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
@@ -49,12 +52,25 @@ const ContactMe = () => {
               required
               className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400 h-40 resize-none mb-6  dark:bg-gray-800 dark:text-gray-200"
             ></textarea>
-            <button
+            {/* <button
               type="submit"
               className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors duration-300 font-mulish"
             >
               Send message
-            </button>
+            </button> */}
+
+            <motion.button
+            whileHover={{
+              scale: 1.1,
+              textShadow: "0px 0px 8px rgb(255 255 255)",
+              boxShadow: "0px 0px 8px #17a2b8",
+              transition: { duration: 0.4, yoyo: "Infinity" },
+            }}
+            className="rounded-md p-3 bg-gray-700 text-white font-mulish"
+            // onClick={() => router.push("/contact")}
+          >
+              Send Message
+          </motion.button>
           </form>
         </div>
       </div>

@@ -533,7 +533,7 @@ export const homeProjectData = [
 export const mobileAppData = [
     {
         id: 1,
-        name: "Abroad Inquiry Mobile App",
+        name: "Abroad Inquiry App",
         description: "Abroad Inquiry is an educational consultancy platform built with React Native, Node.js, Express.js, Socket.IO and MySQL. It leverages Redux for state management and Socket.IO for real-time messaging between students and consultants.",
         appleLink: "https://www.abroadinquiry.com/",
         googlePlay: null,
@@ -573,7 +573,7 @@ export const mobileAppData = [
 
     {
         id: 2,
-        name: "Dayfuna - Hotel Booking Mobile App",
+        name: "Dayfuna App",
         description: `Dayfuna is a smart digital platform for booking hotels,
                   apartments, and houses, with integrated visa services. Built
                   with React Native and Redux, it delivers a seamless experience
