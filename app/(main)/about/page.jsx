@@ -20,13 +20,13 @@ const Page = () => {
 
         {/* About Section */}
         <div className="mt-8 px-4 md:px-16 max-w-4xl mx-auto text-center">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-extrabold leading-tight text-white tracking-tight font-salsa">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-extrabold leading-tight text-black dark:text-white tracking-tight font-salsa">
               HELLO, I&apos;M{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-pink-400">
                 Md. UNUS ALI
               </span>
             </h1>
-          <h2 className="text-lg text-white font-salsa mt-6">
+          <h2 className="text-lg text-black dark:text-white font-salsa mt-6">
               <TypeAnimation
                 sequence={[
                   "Software Engineer",

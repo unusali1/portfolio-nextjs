@@ -288,7 +288,7 @@ export default function Resume() {
         defaultValue="education"
         className="w-full max-w-[350px] mx-auto sm:hidden bg-none"
       >
-        <TabsList className="grid grid-cols-4 gap-2 p-2 bg-gray-100 rounded-lg h-20">
+        <TabsList className="grid grid-cols-4 gap-2 p-2 bg-gray-100 dark:bg-gray-600 rounded-lg h-20">
           <TabsTrigger value="education" className="p-2 rounded-md ">
             <Icon
               icon="tdesign:education-filled"
