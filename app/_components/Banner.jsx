@@ -55,7 +55,7 @@ const Banner = () => {
             <div className="flex flex-row sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
                 className="px-6 py-5 bg-indigo-600 text-white rounded-full shadow-lg hover:bg-indigo-700 hover:scale-105 transition-all duration-300 text-base font-semibold"
-                onClick={() => router.push("/works")}
+                onClick={() => router.push("/projects")}
               >
                 See My Works
               </Button>
