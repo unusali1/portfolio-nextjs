@@ -18,7 +18,6 @@ const Page = () => {
           </div>
         </div>
 
-        {/* About Section */}
         <div className="mt-8 px-4 md:px-16 max-w-4xl mx-auto text-center">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-extrabold leading-tight text-black dark:text-white tracking-tight font-salsa">
               HELLO, I&apos;M{" "}
